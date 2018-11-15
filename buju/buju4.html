@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none; /*取消列表的实心小黑点*/
+        }
+        .ct{
+            overflow:hidden; /*溢出隐藏*/
+            width: 640px;
+            border:dashed 1px orange;
+            margin: 0 auto;  /*相对于页面的居中*/
+        }
+
+        .ct .item{
+            float:left;  /*第1步：浮动*/
+            margin-left: 20px; /*第0步：提前设置*/
+            margin-top: 20px;  /*第0步：提前设置*/
+            width:200px;
+            height:200px;
+            background: red;
+        }
+        .ct>ul{
+            margin-left: -20px;  /*第2步：补充不够的20px*/
+        }
+    </style>
+</head>
+<body>
+<div class="ct">
+    <ul>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+        <li class="item">6</li>
+        <li class="item">7</li>
+        <li class="item">8</li>
+    </ul>
+</div>
+</body>
+</html>
