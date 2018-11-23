@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .frankButton{
+            box-sizing: border-box;
+            background: none;
+            border: none;
+            height: 36px;
+            padding:0 16px;
+            line-height: 36px;
+            font-size:14px;
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .frankButton:hover{
+            background:#e5e5e5;
+        }
+        .frankButton:focus{
+            outline: none;
+            background:#e5e5e5;
+        }
+        .circle{
+            position: absolute;
+            top:50%;
+            left:50%;
+            border-radius: 50%;
+            background: red;
+            width: 10px;
+            height: 10px;
+            margin-left: -5px;
+            margin-top: -5px;
+            visibility: hidden;
+            transition: transform 0.5s;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .circle.active{
+            transform: scale(10);
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<button id="b" class="frankButton">按钮
+<span class="circle"></span>
+</button>
+<script>
+    document.getElementById("b");
+    b.onclick=function(){
+        b.querySelector('.circle').classList.add('active');
+    }
+    b.querySelector('.circle').addEventListener('transitionend',function(){
+        b.querySelector('.circle').classList.remove('active')
+    })
+</script>
+</body>
+</html>
