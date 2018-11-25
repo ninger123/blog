@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//at.alicdn.com/t/font_934854_sgq9v4j9hlf.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        *::before,*::after{
+            box-sizing: border-box;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        .icon {
+            width: 20px; height: 20px;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper{
+            display:flex;
+        }
+        .suggestion{
+            display: none;
+        }
+        .inputWrapper{
+            position: relative;
+            display: inline-block;
+            float: left;
+        }
+        .inputWrapper + button{
+            border:none;
+            background:#3088f8;
+            float:left;
+            font-size:14px;
+            color:white;
+            padding:0 20px;
+        }
+        .inputWrapper + button:focus{
+            outline:none;
+        }
+        .inputWrapper + button:hover{
+            box-shadow:1px 1px 1px 0 rgba(0,0,0,0.2);
+            cursor:pointer;
+            background:#3781f0;
+        }
+        .floatDiv{
+            position: absolute;
+            top:0;
+            right: 0;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-right:10px;
+            color:#b8b8b8;
+        }
+        .inputWrapper input{
+            border:1px solid #b8b8b8;
+            width:540px;
+            height:35px;
+            line-height:35px;
+            padding-left:8px;
+            font-size:15px;
+
+        }
+        .inputWrapper input:focus{
+            outline: none;
+            border-color: #4b94fc;
+        }
+        .splitLine{
+            width: 0;
+            height: 16px;
+            border-left: 1px solid;
+            margin:0 10px;
+        }
+        .icon:hover{
+            fill:#4b94fc;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <span class="inputWrapper">
+        <input type="text">
+    <span class="floatDiv">
+        <svg class="icon">
+            <use xlink:href="#icon-mic"></use>
+        </svg>
+        <span class="splitLine"></span>
+        <svg class="icon">
+            <use xlink:href="#icon-camera"></use>
+        </svg>
+    </span>
+    </span>
+    <button>百度一下</button>
+    <ul class="suggestion">
+        <li>选项1</li>
+        <li>选项2</li>
+        <li>选项3</li>
+        <li>选项4</li>
+    </ul>
+</div>
+</body>
+</html>
