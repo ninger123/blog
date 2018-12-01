@@ -4,15 +4,21 @@
     <title>个人简历</title>
     <link rel="stylesheet" href="./a.css">
     <style type="text/css">
-        .icon {
-            width: 1em; height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
+        .loading{width: 200px;height: 200px;position: relative;}
+        .loading::before,.loading::after{ content: '';  position: absolute;  width: 0;  height: 0;  background: black;  border-radius: 50%;  top:0;  left:0;  bottom:0;  right:0;  margin: auto;  animation:s 1.5s linear infinite;  }
+        .loading::after{animation-delay: 0.75s;  }
+        @keyframes s{
+            0%{  width: 0;height: 0;opacity: 1;  }
+            100%{  width: 100px;height:100px;opacity: 0;} }
+        .icon {width: 1em; height: 1em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;  }
+        .site-welcome{display: none;position: fixed;top:0;left:0;width: 100%;height: 100%;background: #888;z-index:1;justify-content: center;align-items: center;}
+        .site-welcome.active{display: flex;}
     </style>
 </head>
 <body>
+<div id="witewelcome" class="site-welcome active">
+    <div class="loading"></div>
+</div>
 <div class="topNavBar clearfix">
     <div class="topNavBar-inner">
         <a class="logo" href="#" alt="logo" style="float: left; ">
@@ -178,6 +184,8 @@
     portfolio3.onclick= function(){
         portfolioBar.className = 'bar state-3';
     }
+    setTimeout(function(){
+        sitewelcome.classList.remove('active')},1000)
 </script>
 </body>
 </html>
