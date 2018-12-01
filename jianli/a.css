@@ -24,6 +24,15 @@ ol,ul{
     top:0;
     left:0;
     width: 100%;
+    transition: all 1s;
+    color: #b7b7b7;
+}
+.topNavBar.sticky{
+    background: white;
+    padding: 10px 0;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    color: #9a9a9a;
 }
 .topNavBar-inner{
     padding: 0px 16px;
@@ -60,7 +69,7 @@ ol,ul{
 
 }
 .topNavBar nav ul li a{
-    color: #b7b7b7;
+    color: inherit;
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 5px;

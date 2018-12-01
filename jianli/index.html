@@ -19,7 +19,7 @@
 <div id="sitewelcome" class="site-welcome active">
     <div class="loading"></div>
 </div>
-<div class="topNavBar clearfix">
+<div id="topNavBar" class="topNavBar clearfix">
     <div class="topNavBar-inner">
         <a class="logo" href="#" alt="logo" style="float: left; ">
             <span class="rs">RS</span><span class="card">card</span>
@@ -175,7 +175,7 @@
 
 <script src="//at.alicdn.com/t/font_945111_rlj2lbo8kt.js"></script>
 <script>
-    sitewelcome=document.getElementById('sitewelcome');
+    siteWelcome=document.getElementById('sitewelcome');
     portfolio1.onclick= function(){
         portfolioBar.className = 'bar state-1';
     }
@@ -186,7 +186,16 @@
         portfolioBar.className = 'bar state-3';
     }
     setTimeout(function(){
-        sitewelcome.classList.remove('active')},1000)
+        siteWelcome.classList.remove('active')
+    },1000)
+    window.onscroll=function(){
+       if(scrollY>0){
+           topNavBar.classList.add('sticky');
+       }
+       else{
+           topNavBar.classList.remove('sticky');
+       }
+    }
 </script>
 </body>
 </html>
