@@ -3,6 +3,8 @@ a{  text-decoration: none;  }
 ol,ul{  list-style: none;  }
 *{  margin: 0;  padding: 0;  }
 .clearfix::after{  content: '';  display: block;  clear: both;  }
+[data-x].offset{  transform: translateY(100px);  }
+[data-x]{  transform: translateY(0);  transition: all 0.5s;  }
 .topNavBar{  padding: 20px 0px;  position: fixed;  top:0;  left:0;  width: 100%;  transition: all 1s;  color: #b7b7b7;  }
 .topNavBar.sticky{  background: white;  padding: 10px 0;  z-index: 1;  box-shadow: 0 0 10px rgba(0,0,0,0.25);  color: #9a9a9a;  }
 .topNavBar-inner{  padding: 0px 16px;  }
@@ -46,7 +48,8 @@ main{  margin-top: -340px;  }
 .skills>ol{  background: white;  margin-top: 30px;  padding: 42px 50px 10px;  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.5);  }
 .skills>ol>li{  float: left;  width: 48%;  list-style: none;  }
 .progressBar{  height: 5px;  background: #FAE1E1; border-radius: 2px;  margin: 4px 0 40px;  }
-.progressBar > .progress {  height: 100%;  background: #E6686A;  width: 70%;  border-radius: 2px;  }
+.progressBar > .progress {   transform: translateX(0); transition: all 1s;height: 100%;  background: #E6686A;  width: 70%;  border-radius: 2px;  }
+section.skills.offset .progress{  transform: translateX(-100%);  }
 .skills>ol>li:nth-child(even){  float:right;  }
 .portfolio{  text-align: center;  margin-bottom: 100px;  }
 .portfolio nav{  text-align: center;  }
